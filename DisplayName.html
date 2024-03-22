@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display Name</title>
+    </head>
+    <body>
+    <input class="name key" placeholder="What's your name">
+    <button class="display-name">Submit</button>
+
+    <p class="show-name"></p>
+
+
+
+        <script>
+//     let text = '';
+// function displayName(){
+//     const display = document.querySelector('.name').value;
+//     text = display;
+    
+//     let show = `My name is: ${text}`;
+// document.querySelector('.show-name').innerHTML = show;
+// }
+
+
+    let text = '';
+    let display = document.querySelector('.name');
+     let show =  document.querySelector('.show-name');
+
+     document.querySelector('.display-name').
+     addEventListener('click', () => {
+        text = display.value;
+        show.innerHTML = `My name is: ${text}`;
+     });
+       
+            
+        document.querySelector('.key').
+            addEventListener('keydown', () =>{
+                if(event.key === 'Enter'){
+                    text = display.value;
+                    show.innerHTML = `My name is: ${text}`;
+                }
+            });
+            
+
+            
+        </script>
+    </body>
+</html>
